@@ -69,7 +69,7 @@ box *,
 #iop-panel-label,
 #lib-panel-label
 {
-  font-family: inherit;
+  font-family: system-ui;
 }
 
 #outer-border {
@@ -292,12 +292,36 @@ dialog {
   padding: 0 8px;
 }
 
-#plugins_vbox_left > box,
+#plugins_vbox_left > box:not(#basics-box-labels),
 #left > box:nth-child(3),
 #right > box:nth-child(3) {
   background-color: @plugin_bg_color;
-  margin-bottom: 3px;
   border-radius: 4px;
+}
+
+#basics-module-hbox,
+#plugins_vbox_left > box:not(#basics-box-labels),
+#left > box:nth-child(3),
+#right > box:nth-child(3) {
+  margin-bottom: 4px;
+}
+
+#basics-box-labels {
+  background-color: transparent;
+}
+
+#basics-box-labels widget,
+#basics-module-hbox {
+  background-color: @plugin_bg_color;
+}
+
+#basics-box-labels widget {
+  border: none;
+}
+
+#basics-module-hbox {
+  border-radius: 0 0 4px 4px;
+  padding: 4px 0 8px;
 }
 
 #left > box:nth-child(3),
@@ -305,16 +329,18 @@ dialog {
   margin: 6px 0;
 }
 
-#plugins_vbox_left > box:first-child,
+#plugins_vbox_left > #iop-expander:first-child,
 #left > box:nth-child(3),
-#right > box:nth-child(3) {
+#right > box:nth-child(3),
+#basics-box-labels widget:first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
-#plugins_vbox_left > box:last-child,
+#plugins_vbox_left > #iop-expander:last-child,
 #left > box:nth-child(3),
-#right > box:nth-child(3) {
+#right > box:nth-child(3),
+#basics-box-labels #basics-module-hbox:last-child {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -378,7 +404,8 @@ dialog {
   padding: 0;
 }
 
-#module-header .dt_module_btn:first-child {
+#module-header .dt_module_btn:first-child,
+#basics-header-box > .toggle {
   background: @grey_05;
   color: transparent;
   padding: 0;
@@ -387,23 +414,27 @@ dialog {
   margin-right: 3px;
 }
 
-#module-header .dt_module_btn:first-child:checked {
+#module-header .dt_module_btn:first-child:checked,
+#basics-header-box > .toggle:checked {
   color: #262626;
   background: @button_fg;
   color: transparent;
 }
 
-#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2) {
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2),
+#basics-header-box > .toggle:checked ~ #quick-reset {
   color: shade(@danger, 0.7);
   background: shade(@danger, 0.3);
 }
 
-#module-header .dt_module_btn:nth-last-child(2) {
+#module-header .dt_module_btn:nth-last-child(2),
+#basics-header-box #quick-reset {
   transition: 0.2s all ease-in;
 }
 
 #module-header .dt_module_btn:nth-last-child(2):hover,
-#module-header .dt_module_btn:first-child:checked ~ .dt_module_btn:nth-last-child(2):hover {
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2):hover,
+#basics-header-box > .toggle:checked ~ #quick-reset:hover {
   background-color: @danger;
   color: #262626;
 }
