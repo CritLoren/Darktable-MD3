@@ -1,0 +1,444 @@
+@import url("darktable.css");
+
+/* Graphs : histogram, navigation thumbnail and some items on tone curve */
+@define-color graph_bg @plugin_bg_color;
+
+@define-color danger #fd5f51;
+@define-color success #38c76a;
+
+*,
+combobox,
+combobox *,
+togglebutton,
+togglebutton *,
+notebook,
+notebook *,
+notebook tab,
+notebook tab *,
+table,
+table *,
+row,
+row *,
+frame,
+frame *,
+filechooser,
+filechooser *,
+filechooserdialog,
+filechooserdialog *,
+alignment,
+entry,
+entry *,
+textview,
+textview *,
+dialog,
+dialog *,
+colorswatch,
+colorswatch *,
+stack,
+stack *,
+scrollbar,
+scrollbar *,
+scale,
+scale *,
+button,
+button *,
+treeview,
+treeview *,
+menu,
+menu *,
+separator,
+eventbox,
+eventbox *,
+box,
+box *,
+#iop-panel-label,
+#lib-panel-label
+{
+  font-family: system-ui;
+}
+
+#outer-border {
+  background-color: transparent;
+}
+
+.titlebar {
+  padding: 10px;
+  background-color: @bg_color;
+}
+
+.titlebar button {
+ border-radius: 20px;
+ background-color: transparent;
+ border: none;
+ padding: 1px;
+ margin: 2px;
+}
+
+.titlebar button.minimize,
+.titlebar button.minimize:hover {
+  background-color: #fdbe04;
+}
+
+.titlebar button.maximize,
+.titlebar button.maximize:hover {
+  background-color: @success;
+}
+
+
+.titlebar button.close,
+.titlebar button.close:hover {
+  background-color: @danger;
+}
+
+.titlebar button image {
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.titlebar button:hover image {
+  opacity: 1
+}
+
+#top-hinter widget label,
+#top-hinter combobox {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#top-hinter widget label:selected {
+  font-weight: bold;
+}
+
+#top-hinter widget + label {
+  color: transparent;
+  margin: 0 -12px;
+}
+
+#usercss-box {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+#usercss-box scrolledwindow {
+  background-color: @bg_color;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+/* Scrollbar */
+
+scrollbar {
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  margin: 6px;
+}
+
+scrollbar:hover {
+  background-color: @scroll_bar_bg;
+}
+
+scrollbar.vertical {
+  padding: 0 0.125em;
+  margin: 0 6px;
+}
+
+scrollbar.vertical slider {
+  min-width: 0.3em;
+}
+
+scrollbar.vertical:hover {
+  padding: 0;
+}
+
+scrollbar.vertical:hover slider {
+  min-width: 0.5em;
+}
+
+scrollbar.horizontal {
+  padding: 0.125em 0;
+  margin: 6px 0;
+}
+
+scrollbar.horizontal slider {
+  min-height: 0.3em;
+}
+
+scrollbar.horizontal:hover {
+  padding: 0;
+}
+
+scrollbar.horizontal:hover slider {
+  min-height: 0.5em;
+}
+
+/*** so nearly everything that pop out */
+.popup,
+context-menu,
+menu,
+menuitem > arrow,
+tooltip,
+popover,
+popover #bauhaus-slider,
+#range-current,
+.dt_bauhaus_popup
+{
+  border-radius: 6px;
+}
+
+.text-button,
+#bauhaus-combobox,
+#preferences-box .dt_bauhaus,
+entry,
+textview,
+combobox > box box,
+#collapse-block box {
+ border-radius: 6px;
+ padding: 8px;
+ margin: 4px;
+}
+
+button,
+checkbutton check {
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.text-button {
+ padding: 8px 16px;
+}
+
+spinbutton button {
+ margin: 4px;
+ padding: 4px 8px;
+}
+
+checkbutton check {
+  border-radius: 6px;
+  padding: 6px;
+  border: none;
+  margin: 4px;
+}
+
+treeview header button {
+  border-radius: 0;
+  border: none;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+treeview header button:first-child {
+  border-top-left-radius: 8px;
+}
+
+treeview header button:last-child {
+  border-top-right-radius: 8px;
+}
+
+#shortcut-controls checkbutton {
+ margin: 0;
+}
+
+list {
+  padding: 16px 0;
+}
+
+#preferences-box .sidebar row {
+  border-radius: 64px;
+  margin: 4px 12px;
+  padding: 6px 4px;
+  border-left: none;
+  transition: all 0.05s ease-in;
+  min-width: 180px;
+}
+
+#preferences-box .sidebar row:hover label {
+  background-color: transparent;
+}
+
+#preferences-box .sidebar row:selected {
+  border-radius: 64px 0 0 64px;
+  margin-right: 0;
+  border-left: none;
+}
+
+dialog {
+  background-color: @bg_color;
+}
+
+#preferences-box stack > box,
+#preferences-box stack > scrolledwindow {
+  border-radius: 8px 0 0 8px;
+  background-color: @plugin_bg_color;
+  padding: 0.7em 1em 1em 1em;
+}
+
+#right, #left {
+  padding: 0 8px;
+}
+
+#plugins_vbox_left > box:not(#basics-box-labels),
+#left > box:nth-child(3),
+#right > box:nth-child(3) {
+  background-color: @plugin_bg_color;
+  border-radius: 4px;
+}
+
+#basics-module-hbox,
+#plugins_vbox_left > box:not(#basics-box-labels),
+#left > box:nth-child(3),
+#right > box:nth-child(3) {
+  margin-bottom: 4px;
+}
+
+#basics-box-labels {
+  background-color: transparent;
+}
+
+#basics-box-labels widget,
+#basics-module-hbox {
+  background-color: @plugin_bg_color;
+}
+
+#basics-box-labels widget {
+  border: none;
+}
+
+#basics-module-hbox {
+  border-radius: 0 0 4px 4px;
+  padding: 4px 0 8px;
+}
+
+#left > box:nth-child(3),
+#right > box:nth-child(3) {
+  margin: 6px 0;
+}
+
+#plugins_vbox_left > #iop-expander:first-child,
+#left > box:nth-child(3),
+#right > box:nth-child(3),
+#basics-box-labels widget:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+#plugins_vbox_left > #iop-expander:last-child,
+#left > box:nth-child(3),
+#right > box:nth-child(3),
+#basics-box-labels #basics-module-hbox:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#plugins_vbox_left #module-header,
+#left > box:nth-child(3) #module-header,
+#right > box:nth-child(3) #module-header {
+  border: none;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn,
+#modules-tabs .dt_module_btn
+{
+  padding: 0.5em;
+  margin: 0.2em;
+  border-radius: 4px;
+}
+
+.dt_plugin_ui #blending-tabs
+{
+  border-radius: 0 0 4px 4px;
+}
+
+#thumbtable-filemanager {
+  border: none;
+}
+
+#thumbtable-filmstrip {
+  border-radius: 8px 8px 0 0;
+}
+
+#thumb-back {
+ background-color: transparent;
+ border: none;
+ border-radius: 4px;
+ transition: all 0.2s ease-in;
+}
+
+#thumbtable-filemanager #thumb-back {
+  border-radius: 12px;
+}
+
+#thumb-ext {
+  border-radius: 4px;
+}
+
+#thumb-bottom {
+ border-radius: 12px;
+}
+
+#header-toolbar box button.dt_module_btn {
+  margin-right: 0px;
+  padding: 4px 8px;
+}
+
+#module-header .dt_module_btn:disabled {
+  min-width: 0;
+  min-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#module-header .dt_module_btn:first-child,
+#basics-header-box > .toggle {
+  background: @grey_05;
+  color: transparent;
+  padding: 0;
+  border-radius: 32px;
+  min-width: 5px;
+  margin-right: 3px;
+}
+
+#module-header .dt_module_btn:first-child:checked,
+#basics-header-box > .toggle:checked {
+  color: #262626;
+  background: @button_fg;
+  color: transparent;
+}
+
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2),
+#basics-header-box > .toggle:checked ~ #quick-reset {
+  color: shade(@danger, 0.7);
+  background: shade(@danger, 0.3);
+}
+
+#module-header .dt_module_btn:nth-last-child(2),
+#basics-header-box #quick-reset {
+  transition: 0.2s all ease-in;
+}
+
+#module-header .dt_module_btn:nth-last-child(2):hover,
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2):hover,
+#basics-header-box > .toggle:checked ~ #quick-reset:hover {
+  background-color: @danger;
+  color: #262626;
+}
+
+#navigation-module {
+  border-radius: 12px;
+}
+
+#nav-zoom {
+  border-radius: 8px;
+  margin: 6px;
+}
+
+#left > box:first-child,
+#modules-tabs {
+  margin-bottom: 8px
+}
+
+#modules-tabs {
+  background-color: transparent;
+  margin-top: 8px
+}
