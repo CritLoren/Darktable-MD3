@@ -1,0 +1,118 @@
+@import url("../darktable.css");
+
+@define-color success #38c76a;
+@define-color success_text alpha(@success, 0.7);
+@define-color success_bg alpha(@success, 0.2);
+
+@define-color warning #fdbe04;
+@define-color warning_text alpha(@warning, 0.7);
+@define-color warning_bg alpha(@warning, 0.2);
+
+@define-color danger #fd5f51;
+@define-color danger_text alpha(@danger, 0.7);
+@define-color danger_bg alpha(@danger, 0.2);
+
+#outer-border {
+  background-color: transparent;
+}
+
+#top-hinter widget label,
+#top-hinter combobox {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#top-hinter widget label:selected {
+  font-weight: bold;
+}
+
+#top-hinter widget + label {
+  color: transparent;
+  margin: 0 -12px;
+}
+
+#usercss-box {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+#usercss-box scrolledwindow {
+  background-color: @bg_color;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+#shortcut-controls checkbutton {
+ margin: 0;
+}
+
+list {
+  padding: 16px 0;
+}
+
+dialog {
+  background-color: @bg_color;
+}
+
+#preferences-box .sidebar row {
+  border-radius: 64px;
+  margin: 4px 12px;
+  padding: 6px 4px;
+  border-left: none;
+  transition: all 0.05s ease-in;
+  min-width: 180px;
+}
+
+#preferences-box .sidebar row:hover label {
+  background-color: transparent;
+}
+
+#preferences-box .sidebar row:selected {
+  border-radius: 64px 0 0 64px;
+  margin-right: 0;
+  border-left: none;
+}
+
+#preferences-box stack > box,
+#preferences-box stack > scrolledwindow {
+  border-radius: 8px 0 0 8px;
+  background-color: @plugin_bg_color;
+  padding: 0.7em 1em 1em 1em;
+}
+
+#thumbtable-filemanager {
+  border: none;
+}
+
+#thumbtable-filmstrip {
+  border-radius: 8px 8px 0 0;
+}
+
+#thumb-back {
+ background-color: transparent;
+ border: none;
+ border-radius: 4px;
+ transition: all 0.2s ease-in;
+}
+
+#thumbtable-filemanager #thumb-back {
+  border-radius: 12px;
+}
+
+#thumb-ext {
+  border-radius: 4px;
+}
+
+#thumb-bottom {
+ border-radius: 12px;
+}
+
+#navigation-module {
+  border-radius: 12px;
+}
+
+#nav-zoom {
+  border-radius: 8px;
+  margin: 6px;
+}

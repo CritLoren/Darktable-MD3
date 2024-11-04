@@ -1,0 +1,116 @@
+
+
+#right, #left {
+  padding: 0 8px;
+}
+
+#left > box:nth-child(3) #module-header,
+#right > box:nth-child(3) #module-header {
+  padding: 0;
+}
+
+#plugins_vbox_left > box:not(#basics-box-labels) {
+  background-color: @plugin_bg_color;
+  border-radius: 4px;
+}
+
+#basics-module-hbox,
+#plugins_vbox_left > box:not(#basics-box-labels) {
+  margin-bottom: 4px;
+}
+
+#basics-box-labels {
+  background-color: transparent;
+}
+
+#basics-box-labels widget,
+#basics-module-hbox {
+  background-color: @plugin_bg_color;
+}
+
+#basics-box-labels widget {
+  border: none;
+}
+
+#basics-module-hbox,
+#plugins_vbox_left frame.dt_plugin_ui {
+  border-radius: 0 0 4px 4px;
+}
+
+#basics-module-hbox {
+  padding: 4px 0 8px;
+}
+
+#basics-box-labels #basics-header-box {
+  padding: 6px 4px 6px 10px;
+}
+
+#basics-module-hbox + widget {
+  border-radius: 4px 4px 0 0;
+}
+
+#left > box:nth-child(3),
+#right > box:nth-child(3) {
+  margin: 6px 0;
+}
+
+#plugins_vbox_left > #iop-expander:first-child,
+#basics-box-labels widget:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+#plugins_vbox_left > #iop-expander:last-child,
+#basics-box-labels #basics-module-hbox:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#plugins_vbox_left #module-header,
+#left > box:nth-child(3) #module-header,
+#right > box:nth-child(3) #module-header {
+  border: none;
+}
+
+.dt_plugin_ui #blending-tabs .dt_module_btn,
+#modules-tabs .dt_module_btn
+{
+  padding: 0.5em;
+  margin: 0.2em;
+  border-radius: 4px;
+}
+
+.dt_plugin_ui #blending-tabs
+{
+  border-radius: 0 0 4px 4px;
+}
+
+#header-toolbar box button.dt_module_btn {
+  margin-right: 0px;
+  padding: 4px 8px;
+}
+
+#left > box:first-child,
+#modules-tabs {
+  margin-bottom: 8px
+}
+
+#modules-tabs {
+  background-color: transparent;
+  margin-top: 8px
+}
+
+.font {
+  margin: 8px 0;
+}
+
+.dt_plugin_ui #blending-tabs
+{
+  background-color: shade (@plugin_bg_color, 1.3)
+}
+
+.dt_section_label {
+  border: none;
+  background-color: shade (@plugin_bg_color, 1);
+  border-radius: 4px;
+}

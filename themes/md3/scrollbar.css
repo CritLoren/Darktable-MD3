@@ -1,0 +1,40 @@
+scrollbar {
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  margin: 0.6em;
+  border-radius: 32px;
+}
+
+scrollbar.vertical {
+  margin: 0 0.6em;
+}
+
+#usercss-box scrollbar.vertical {
+  margin: 0.6em;
+}
+
+scrollbar:hover {
+  background-color: @scroll_bar_bg;
+}
+
+scrollbar.vertical slider {
+  min-width: 0.2em;
+}
+
+scrollbar.vertical:hover slider {
+  min-width: 0.5em;
+  margin: 0 -7px;
+}
+
+scrollbar.horizontal {
+  margin: 0.6em 0;
+}
+
+scrollbar.horizontal slider {
+  min-height: 0.3em;
+}
+
+scrollbar.horizontal:hover slider {
+  min-height: 0.5em;
+  margin: -7px 0;
+}

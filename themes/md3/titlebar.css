@@ -1,0 +1,41 @@
+@define-color minimize_colour @warning;
+@define-color maximize_colour @success;
+@define-color close_colour @danger;
+
+.titlebar {
+  padding: 10px;
+  background-color: @bg_color;
+}
+
+.titlebar button {
+ border-radius: 20px;
+ background-color: transparent;
+ border: none;
+ padding: 1px;
+ margin: 2px;
+}
+
+.titlebar button.minimize,
+.titlebar button.minimize:hover {
+  background-color: @minimize_colour;
+}
+
+.titlebar button.maximize,
+.titlebar button.maximize:hover {
+  background-color: @maximize_colour;
+}
+
+
+.titlebar button.close,
+.titlebar button.close:hover {
+  background-color: @close_colour;
+}
+
+.titlebar button image {
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.titlebar button:hover image {
+  opacity: 1
+}

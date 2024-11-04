@@ -1,0 +1,106 @@
+.popup,
+context-menu,
+menu,
+menuitem > arrow,
+tooltip,
+popover,
+popover #bauhaus-slider,
+#range-current,
+.dt_bauhaus_popup
+{
+  border-radius: 6px;
+}
+
+.text-button,
+#preferences-box #bauhaus-combobox,
+#header-toolbar #bauhaus-combobox,
+#header-toolbar .search,
+#preferences-box .dt_bauhaus,
+textview,
+combobox > box box,
+#collapse-block box {
+ border-radius: 6px;
+ padding: 8px;
+}
+
+#collapse-block frame {
+  margin-top: 6px;
+}
+
+button,
+checkbutton check {
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.text-button {
+ padding: 8px 16px;
+}
+
+#bauhaus-combobox {
+  margin: 5px 0;
+}
+
+#preferences-box .text-button,
+#preferences-box #bauhaus-combobox,
+#preferences-box .dt_bauhaus,
+#preferences-box entry,
+#preferences-box textview,
+#preferences-box combobox > box box,
+#preferences-box #collapse-block box,
+#preferences-box checkbutton check {
+ margin-top: 4px;
+ margin-bottom: 4px;
+}
+
+#left .text-button,
+#right .text-button,
+#left #non-flat,
+#right #non-flat,
+#left #collapse-block box,
+#right #collapse-block box {
+ margin: 4px;
+}
+
+#left box.horizontal > #non-flat,
+#right box.horizontal > #non-flat {
+  margin: 0 0 0 6px;
+}
+
+spinbutton button {
+ margin: 4px;
+}
+
+spinbutton button,
+#non-flat {
+ padding: 8px 10px;
+}
+
+checkbutton check {
+  border-radius: 6px;
+  padding: 6px;
+  border: none;
+}
+
+treeview header button {
+  border-radius: 0;
+  border: none;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+treeview header button:first-child {
+  border-top-left-radius: 8px;
+}
+
+treeview header button:last-child {
+  border-top-right-radius: 8px;
+}
+
+#header-toolbar .dt_quick_filter button.dt_module_btn {
+  padding: 4px;
+}
+
+#header-toolbar .search {
+  margin: 5px;
+}

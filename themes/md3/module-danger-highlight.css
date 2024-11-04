@@ -1,0 +1,37 @@
+#module-header .dt_module_btn:nth-last-child(2),
+#basics-header-box #quick-reset,
+#module-header .dt_module_btn:last-child,
+#basics-header-box #quick-presets {
+  transition: 0.2s all ease-in;
+}
+
+#module-header .dt_module_btn:nth-last-child(2):hover,
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2):hover,
+#basics-header-box > .toggle:checked ~ #quick-reset:hover,
+#module-header .dt_module_btn:last-child:hover,
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:last-child:hover,
+#basics-header-box > .toggle:checked ~ #quick-presets:hover {
+  color: @plugin_bg_color;
+}
+
+/* idle overrides */
+
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2),
+#basics-header-box > .toggle:checked ~ #quick-reset {
+  color: @danger_text;
+  background: @danger_bg;
+}
+
+/* Hover colours */
+
+#module-header .dt_module_btn:nth-last-child(2):hover,
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:nth-last-child(2):hover,
+#basics-header-box > .toggle:checked ~ #quick-reset:hover {
+  background-color: @danger;
+}
+
+#module-header .dt_module_btn:last-child:hover,
+#module-header .dt_module_btn:first-child:checked:not(:disabled) ~ .dt_module_btn:last-child:hover,
+#basics-header-box > .toggle:checked ~ #quick-presets:hover {
+  background-color: @warning;
+}
