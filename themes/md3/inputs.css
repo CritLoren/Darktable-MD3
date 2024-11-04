@@ -18,7 +18,8 @@ popover #bauhaus-slider,
 #preferences-box .dt_bauhaus,
 textview,
 combobox > box box,
-#collapse-block box {
+#collapse-block box,
+.search {
  border-radius: 6px;
  padding: 8px;
 }
