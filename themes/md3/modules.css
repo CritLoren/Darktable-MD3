@@ -1,8 +1,22 @@
+/* General paddings */
 
-
-#right, #left {
-  padding: 0 8px;
+#left {
+  padding: 0 8px 0 0;
 }
+
+#left > :not(scrolledwindow) {
+  padding-left: 8px;
+}
+
+#right {
+  padding: 0 0 0 8px;
+}
+
+#right > :not(scrolledwindow) {
+  padding-right: 8px;
+}
+
+/* bottom anchored options */
 
 #left > box:nth-child(3) #module-header,
 #right > box:nth-child(3) #module-header {
@@ -113,4 +127,33 @@
   border: none;
   background-color: shade (@plugin_bg_color, 1);
   border-radius: 4px;
+}
+
+/* History panel */
+#left #history-ui {
+  padding-right: 4px;
+}
+
+#right #history-ui {
+  padding-left: 4px;
+}
+
+/* Module filtering */
+#module-filtering > box:first-child {
+  margin-bottom: 6px;
+}
+
+#module-filtering #collect-rule-widget {
+  padding: 6px;
+  margin: 0 0 4px;
+}
+
+#module-filtering #collect-rule-widget:first-child {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+#module-filtering #collect-rule-widget:last-child {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 }

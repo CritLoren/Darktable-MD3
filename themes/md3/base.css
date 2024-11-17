@@ -1,5 +1,7 @@
 @import url("../darktable.css");
 
+@define-color dialog-bg-color shade(@bg_color, 0.9);
+
 @define-color success #38c76a;
 @define-color success_text alpha(@success, 0.7);
 @define-color success_bg alpha(@success, 0.2);
@@ -51,8 +53,15 @@ list {
   padding: 16px 0;
 }
 
-dialog {
-  background-color: @bg_color;
+dialog,
+messagedialog,
+.dt_bauhaus_popup {
+  background-color: @dialog-bg-color;
+}
+
+#preferences-box .sidebar scrolledwindow,
+dialog .sidebar scrolledwindow {
+  background-color: transparent;
 }
 
 #preferences-box .sidebar row {
@@ -74,11 +83,34 @@ dialog {
   border-left: none;
 }
 
+
+/* Border radius for dialogs */
+messagedialog,
+messagedialog .titlebar,
+dialog,
+dialog .titlebar,
 #preferences-box stack > box,
 #preferences-box stack > scrolledwindow {
-  border-radius: 8px 0 0 8px;
+  border-radius: 16px;
+}
+
+#preferences-box stack > box,
+#preferences-box stack > scrolledwindow {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
   background-color: @plugin_bg_color;
   padding: 0.7em 1em 1em 1em;
+}
+
+dialog .titlebar {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+dialog {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 #thumbtable-filemanager {
@@ -97,7 +129,7 @@ dialog {
 }
 
 #thumbtable-filemanager #thumb-back {
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 #thumb-ext {
@@ -115,4 +147,9 @@ dialog {
 #nav-zoom {
   border-radius: 8px;
   margin: 6px;
+}
+
+/* increase colour label size by reducing padding */
+#thumb-colorlabels {
+  padding: 5px;
 }

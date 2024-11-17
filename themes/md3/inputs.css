@@ -19,13 +19,25 @@ popover #bauhaus-slider,
 textview,
 combobox > box box,
 #collapse-block box,
+.search,
+#non-flat {
+  border-radius: 20px;
+}
+
+.text-button,
+#preferences-box #bauhaus-combobox,
+#header-toolbar #bauhaus-combobox,
+#header-toolbar .search,
+#preferences-box .dt_bauhaus,
+textview,
+combobox > box box,
+#collapse-block box,
 .search {
- border-radius: 6px;
- padding: 8px;
+  padding: 8px;
 }
 
 #collapse-block frame {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 button,
@@ -61,6 +73,20 @@ checkbutton check {
 #left #collapse-block box,
 #right #collapse-block box {
  margin: 4px;
+}
+
+/* Tricky way of removing side padding when it's just 2 buttons per row */
+#plugins_vbox_left .dt_plugin_ui .horizontal:not(grid) > .text-button:first-child {
+  margin-left: 0;
+}
+
+#plugins_vbox_left .dt_plugin_ui .horizontal:not(grid) > .text-button:last-child {
+  margin-right: 0;
+}
+
+#plugins_vbox_left .dt_plugin_ui .horizontal:not(grid) ~ #collapse-block box {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #left box.horizontal > #non-flat,
@@ -99,9 +125,42 @@ treeview header button:last-child {
 }
 
 #header-toolbar .dt_quick_filter button.dt_module_btn {
-  padding: 4px;
+  padding: 2px;
 }
 
 #header-toolbar .search {
   margin: 5px;
+}
+
+#header-toolbar .dt_module_btn {
+  margin: 5.5px 2px;
+  min-height: 8px;
+}
+
+#header-toolbar .dt_module_btn #button-canvas {
+  margin: 18px;
+}
+
+#header-rule-box #dt-range-band {
+  background: transparent;
+  border: transparent;
+}
+
+messagedialog .dialog-action-area {
+  margin: 16px
+}
+
+.dialog-action-area button {
+  margin: 6px
+}
+
+/* History module */
+.dt_history_items {
+  padding: 1px 4px 3px;
+  border-radius: 6px;
+}
+
+#history-number {
+  font-size: 0.9rem;
+  margin-top: 0.26rem;
 }

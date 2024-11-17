@@ -1,21 +1,39 @@
+.dt_module_btn.dt_history_switch,
 #module-header .dt_module_btn:first-child,
 #basics-header-box > .toggle {
-  background: @bg_color;
-  color: transparent;
   padding: 0;
+  color: transparent;
+  min-width: 0;
+}
+
+.dt_module_btn.dt_history_switch,
+#right #module-header .dt_module_btn:first-child,
+#right #basics-header-box > .toggle {
+  background: @bg_color;
   border-radius: 32px;
   min-width: 6px;
+  min-height: 24px;
   margin: 0 3px 0 0;
 }
 
-#module-header .dt_module_btn:first-child:hover,
-#basics-header-box > .toggle:hover {
-  min-width: 10px;
+.dt_module_btn.dt_history_switch {
+  margin: 3px 0 3px 3px;
 }
 
-#module-header .dt_module_btn:first-child:checked,
-#basics-header-box > .toggle:checked {
-  color: @plugin_bg_color;
-  background: @button_fg;
+.dt_module_btn.dt_history_switch:hover,
+#right #module-header .dt_module_btn:first-child:hover,
+#right #basics-header-box > .toggle:hover {
+  min-width: 9px;
+  margin: 0;
+}
+
+.dt_module_btn.dt_history_switch:not(.dt_history_switch_off),
+#right #module-header .dt_module_btn:first-child:checked,
+#right #basics-header-box > .toggle:checked {
   color: transparent;
+  background: @button_fg;
+}
+
+#left #module-header label {
+  padding-left: 0;
 }

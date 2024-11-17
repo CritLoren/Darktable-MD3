@@ -7,6 +7,11 @@
   background-color: @bg_color;
 }
 
+messagedialog .titlebar,
+dialog .titlebar {
+  background-color: @dialog-bg-color;
+}
+
 .titlebar button {
  border-radius: 20px;
  background-color: transparent;
