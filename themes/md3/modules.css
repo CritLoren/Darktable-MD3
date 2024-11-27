@@ -157,3 +157,8 @@
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
 }
+
+/* Increase min-height to account for auto-hideable buttons */
+#module-header {
+  min-height: 28px;
+}
