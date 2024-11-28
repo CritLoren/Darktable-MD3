@@ -11,9 +11,9 @@
 #right #basics-header-box > .toggle {
   background: @bg_color;
   border-radius: 32px;
-  min-width: 6px;
+  min-width: 7px;
   min-height: 24px;
-  margin: 0 3px 0 0;
+  margin: 0 2px 0 0;
 }
 
 .dt_module_btn.dt_history_switch {
@@ -23,8 +23,7 @@
 .dt_module_btn.dt_history_switch:hover,
 #right #module-header .dt_module_btn:first-child:hover,
 #right #basics-header-box > .toggle:hover {
-  min-width: 9px;
-  margin: 0;
+  min-width: 14px;
 }
 
 .dt_module_btn.dt_history_switch:not(.dt_history_switch_off),
@@ -37,3 +36,4 @@
 #left #module-header label {
   padding-left: 0;
 }
+
